@@ -4,68 +4,72 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>SUNABACOイベント：WordPress超入門</title>
+  <meta name="description" content="SUNABACOの初心者向けWordPress超入門。日程・場所・対象・申込リンクをまとめた告知ページ。">
   <style>
-    body {
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial;
-      max-width: 780px;
-      margin: 40px auto;
-      padding: 0 16px;
-      line-height: 1.7;
-      background: #f9f9f9;
-    }
-    header {
-      text-align: center;
-      padding: 20px;
-      background: #333;
-      color: white;
-      border-radius: 8px;
-    }
-    h1 { margin: 0; }
-    section {
-      background: white;
-      margin: 20px 0;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-    a.button {
-      display: inline-block;
-      padding: 12px 18px;
-      margin-top: 10px;
-      background: #007acc;
-      color: white;
-      border-radius: 6px;
-      text-decoration: none;
-    }
-    a.button:hover {
-      background: #005fa3;
-    }
+    :root { --bg:#f7f7f8; --fg:#111; --card:#fff; --brand:#007acc; }
+    *{box-sizing:border-box}
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial; color:var(--fg);
+         background:var(--bg); margin:0}
+    .wrap{max-width:860px; margin:32px auto; padding:0 16px}
+    header{background:#222;color:#fff;border-radius:14px;padding:24px}
+    header h1{margin:0;font-size:28px}
+    header p{margin:6px 0 0;opacity:.9}
+    .card{background:var(--card);border-radius:14px;box-shadow:0 2px 8px rgba(0,0,0,.06);margin:18px 0;overflow:hidden}
+    .hero{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;background:#ddd}
+    .inner{padding:18px}
+    .grid{display:grid;gap:14px}
+    @media (min-width:720px){ .grid{grid-template-columns:1fr 1fr} }
+    h2{margin:0 0 10px;font-size:20px}
+    ul{margin:0;padding-left:18px}
+    li{margin:4px 0}
+    .btn{display:inline-block;background:var(--brand);color:#fff;text-decoration:none;
+         padding:12px 18px;border-radius:10px;font-weight:600}
+    .btn:hover{filter:brightness(.95)}
+    footer{color:#555;font-size:14px;margin:12px 0 0;text-align:center}
   </style>
 </head>
 <body>
+  <div class="wrap">
+    <header>
+      <h1>WordPress超入門（初心者歓迎）</h1>
+      <p>SUNABACO（スナバコ）の無料イベント告知ページ</p>
+    </header>
 
-<header>
-  <h1>SUNABACOイベント</h1>
-  <p>WordPress超入門（初心者歓迎）</p>
-</header>
+    <!-- 画像：あとで src を差し替えます -->
+    <div class="card">
+      <img class="hero" src="images/hero.jpg" alt="SUNABACO WordPress超入門のイメージ画像">
+    </div>
 
-<section>
-  <h2>イベント概要</h2>
-  <ul>
-    <li><strong>日程：</strong>2025年○月○日（○） ○:○〜○:○</li>
-    <li><strong>場所：</strong>オンライン / SUNABACO 各校</li>
-    <li><strong>対象：</strong>WordPress 未経験〜初心者</li>
-    <li><strong>参加費：</strong>無料</li>
-  </ul>
-  <a class="button" href="https://sunabaco.com/event/wp-beginner/" target="_blank" rel="noopener">
-    詳細・申込はこちら
-  </a>
-</section>
+    <div class="card">
+      <div class="inner grid">
+        <section>
+          <h2>イベント概要</h2>
+          <p>
+            はじめての方向けに、WordPressの基本をやさしく解説します。<br>
+            管理画面の使い方、投稿と固定ページ、テーマの入れ替え、プラグインの考え方など、
+            「まずここだけ押さえればOK」を短時間で体験できます。
+          </p>
+        </section>
+        <section>
+          <h2>開催情報</h2>
+          <ul>
+            <!-- ↓ 数字を書き換えてね -->
+            <li><strong>日程：</strong>2025/09/15（月）19:00–21:00</li>
+            <li><strong>場所：</strong>オンライン / SUNABACO各校</li>
+            <li><strong>対象：</strong>未経験〜初心者</li>
+            <li><strong>参加費：</strong>無料</li>
+          </ul>
+          <p style="margin-top:12px">
+            <a class="btn" href="https://sunabaco.com/event/wp-beginner/" target="_blank" rel="noopener">
+              公式の詳細・申込へ
+            </a>
+          </p>
+        </section>
+      </div>
+    </div>
 
-<section>
-  <h2>主催</h2>
-  <p>SUNABACO（スナバコ）</p>
-</section>
-
+    <footer>主催：SUNABACO（スナバコ）</footer>
+  </div>
 </body>
 </html>
+
